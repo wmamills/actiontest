@@ -41,6 +41,11 @@ jobs:
           lsblk
           df -h
 
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: sleep 120
+
+
   build2:
     # The type of runner that the job will run on
     runs-on: macOS-latest
