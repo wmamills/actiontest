@@ -35,6 +35,7 @@ jobs:
           echo "user: $(whoami)"
           echo "pwd: $(pwd)"
           git describe || true
+          git log -n 1 --oneline HEAD
           cat /etc/os-release
           free -h
           lscpu
