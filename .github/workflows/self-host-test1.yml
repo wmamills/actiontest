@@ -33,7 +33,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo "user: $(whoami)"
-          echo "pwd: $(pwd)
+          echo "pwd: $(pwd)"
           git describe || true
           cat /etc/os-release
           free -h
