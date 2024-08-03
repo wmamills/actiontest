@@ -58,7 +58,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Hello World
-        run: echo Hello, world from build2
+        run: echo Hello, world from build-macos
 
       # Runs a set of commands using the runners shell
       - name: OS and machine info
@@ -71,3 +71,14 @@ jobs:
           echo "RAM:  $(( $(sysctl -n hw.memsize) / 1024 ** 3 )) GB"
           echo "CPUs: $(sysctl -n hw.ncpu)"
           df -h
+
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+    - name: Hello World
+      run: echo Hello world from build-windows
+
+    - name: OS and machine info
+      run: |
+         msinfo32
